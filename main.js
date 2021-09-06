@@ -10,7 +10,7 @@ const self =
  invisible:()=>{
 	 self.element.style.display = 'none'
  },
- setClass:(name, value)=>{
+ attr:(name, value)=>{
   if(value == null)
   self.element.getAttribute(name)
   else
@@ -22,13 +22,13 @@ const self =
    alertInput:(event)=>{
     prompt(event)
    },
-  createObject:(event)=>{
-   document.createElement(event)
-  }
+    popBox:(event)=>{
+        alert(event)
+    },
+    backgroundColor:(event)=>{
+            document.body.style.backgroundColor = event
+    },
+       
  }
 return self
 }
-$().createObject('BUTTON')
-
-
-
